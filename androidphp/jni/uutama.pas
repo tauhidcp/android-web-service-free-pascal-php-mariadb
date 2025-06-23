@@ -159,7 +159,7 @@ begin
   begin
     if resultCode = RESULT_OK then
     begin
-    MUpload.EPathFile.Text:=GetRealPathFromURI(MUpload.IntentManager1.GetDataUri(intentData)); // For Upload File Work on Target API 28 (Android 9)
+    MUpload.EPathFile.Text:=GetRealPathFromURI(MUpload.IntentManager1.GetDataUri(intentData));
     MUpload.ENamaFile.Text:=GetFileNameByUri(MUpload.IntentManager1.GetDataUri(intentData));
   end;
   end;
@@ -170,7 +170,6 @@ var
   manifestPermissions: array of string;
 begin
    // Request Permission For Upload & Download
-   // Work on Target API 28 (Android 9)
     if IsRuntimePermissionNeed() then
    begin
       SetLength(manifestPermissions, 1);
