@@ -4,7 +4,7 @@ Aplikasi Web Service Sederhana Menggunakan Lazarus Free Pascal + PHP dan Databas
 
 - Mengambil data JSON dari PHP dan menampilkannya ke dalam ListView Android
 - Mengirimkan Data dari Android Menggunakan Free Pascal untuk selanjutnya diproses oleh PHP (Insert, Update dan Delete) ke dalam Database MariaDB
-- Fitur Upload dan Download File Berjalan pada Target API 28 (Android 9)
+- Fitur Upload dan Download File
 
 ## Tools Pendukung
 - Windows 11 64
