@@ -85,10 +85,11 @@ procedure TMUpload.BDownloadClick(Sender: TObject);
 begin
  if (Upload=True) then
  begin
+                 // Save File to : Android\data\id.tauhidslab.androidphp.androidphp\files\Download
  DownloadService1.SaveToFile(Self.GetEnvironmentDirectoryPath(dirDownloads), ENamaFile.Text);
  DownloadService1.Start('http://192.168.1.12/webapi/upload/'+ENamaFile.Text,'id.tauhidslab.androidphp.androidphp.DOWNLOAD_RECEIVER');
  ShowMessage('Berhasil Download File '+GetEnvironmentDirectoryPath(dirDownloads)+'/'+ENamaFile.Text);
-end;                                   // Android\data\id.tauhidslab.androidphp.androidphp\files\Download
+end;                                   
 end;
 
 end.
