@@ -8,7 +8,7 @@ Aplikasi Web Service Sederhana Menggunakan Lazarus Free Pascal + PHP dan Databas
 
 ## Tools Pendukung
 - Windows 11 64
-- Lazarus 3.6 + FPC 3.2.2 + LAMW 0.8.6.4 (dipasang menggunakan tools **fpcupdeluxe**)
+- **Lazarus 3.6 + Free Pascal (FPC) 3.2.2 + Lazaru Android Module Wizard (LAMW) 0.8.6.4** (dipasang menggunakan tools **fpcupdeluxe**)
 - Apache-ant-1.10.14
 - Gradle 8.5.0
 - XAMPP (PHP 8.2.4 and MariaDB 10.4.28)
