@@ -20,4 +20,5 @@ Aplikasi Web Service Sederhana Menggunakan Lazarus Free Pascal + PHP dan Databas
 - Xiaomi Redmi Note 9 / Android 12 (mode USB debug)
 - Samsung / Android 15 
 
-- **Nonaktifkan firewall agar koneksi dari Android tidak diblok oleh Windows**
+## Note
+**Nonaktifkan firewall agar koneksi dari Android tidak diblok oleh Windows**
