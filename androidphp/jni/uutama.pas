@@ -149,6 +149,7 @@ procedure TMUtama.BUploadClick(Sender: TObject);
 begin
  CloseModule;
  MUpload.PanelUtama.Visible:= True;
+ MUpload.TextOutput.Visible:=False;
  MUpload.PanelUtama.BringToFront();
 end;
 
@@ -159,8 +160,10 @@ begin
   begin
     if resultCode = RESULT_OK then
     begin
-    MUpload.EPathFile.Text:=GetRealPathFromURI(MUpload.IntentManager1.GetDataUri(intentData));
+    //MUpload.EPathFile.Text:=GetRealPathFromURI(MUpload.IntentManager1.GetDataUri(intentData)); // Not Work on API 33+
     MUpload.ENamaFile.Text:=GetFileNameByUri(MUpload.IntentManager1.GetDataUri(intentData));
+    CopyFileFromUri(MUpload.IntentManager1.GetDataUri(intentData),GetEnvironmentDirectoryPath(dirDownloads));
+    MUpload.EPathFile.Text:=GetEnvironmentDirectoryPath(dirDownloads)+'/'+GetFileNameByUri(MUpload.IntentManager1.GetDataUri(intentData));
   end;
   end;
 end;

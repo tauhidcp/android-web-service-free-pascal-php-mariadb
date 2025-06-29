@@ -24,8 +24,9 @@
           <Item0 Name="fclControls"/>
           <Item1 Name="jControls" Value="jButton;jForm;jHttpClient;jPanel;jTextView"/>
         </CustomData>
-        <TopLine Value="152"/>
-        <CursorPos X="115" Y="162"/>
+        <IsVisibleTab Value="True"/>
+        <TopLine Value="142"/>
+        <CursorPos X="10" Y="152"/>
         <UsageCount Value="32"/>
         <Loaded Value="True"/>
         <LoadedDesigner Value="True"/>
@@ -71,12 +72,11 @@
         <HasResources Value="True"/>
         <CustomData Count="2">
           <Item0 Name="fclControls"/>
-          <Item1 Name="jControls" Value="jButton;jDownloadService;jEditText;jForm;jHttpClient;jIntentManager;jPanel"/>
+          <Item1 Name="jControls" Value="jButton;jDownloadService;jEditText;jForm;jHttpClient;jIntentManager;jPanel;jTextView"/>
         </CustomData>
-        <IsVisibleTab Value="True"/>
         <EditorIndex Value="4"/>
-        <TopLine Value="78"/>
-        <CursorPos X="51" Y="91"/>
+        <TopLine Value="76"/>
+        <CursorPos X="2" Y="93"/>
         <UsageCount Value="32"/>
         <Loaded Value="True"/>
         <LoadedDesigner Value="True"/>
@@ -100,19 +100,7 @@
         <DefaultSyntaxHighlighter Value="Delphi"/>
       </Unit>
     </Units>
-    <JumpHistory HistoryIndex="27">
-      <Position>
-        <Filename Value="uupload.pas"/>
-        <Caret Line="71" Column="44" TopLine="55"/>
-      </Position>
-      <Position>
-        <Filename Value="uupload.pas"/>
-        <Caret Line="82" Column="5" TopLine="54"/>
-      </Position>
-      <Position>
-        <Filename Value="uupload.pas"/>
-        <Caret Line="74" Column="5" TopLine="70"/>
-      </Position>
+    <JumpHistory HistoryIndex="29">
       <Position>
         <Filename Value="uupload.pas"/>
         <Caret Line="37" Column="24" TopLine="29"/>
@@ -212,6 +200,26 @@
       <Position>
         <Filename Value="uupload.pas"/>
         <Caret Line="76" Column="44" TopLine="67"/>
+      </Position>
+      <Position>
+        <Filename Value="uupload.pas"/>
+        <Caret Line="92" Column="51" TopLine="76"/>
+      </Position>
+      <Position>
+        <Filename Value="uutama.pas"/>
+        <Caret Line="164" Column="102" TopLine="152"/>
+      </Position>
+      <Position>
+        <Filename Value="uupload.pas"/>
+        <Caret Line="92" Column="130" TopLine="76"/>
+      </Position>
+      <Position>
+        <Filename Value="uutama.pas"/>
+        <Caret Line="164" Column="29" TopLine="154"/>
+      </Position>
+      <Position>
+        <Filename Value="uutama.pas"/>
+        <Caret Line="152" Column="27" TopLine="148"/>
       </Position>
     </JumpHistory>
     <RunParams>

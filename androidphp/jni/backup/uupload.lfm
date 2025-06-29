@@ -177,6 +177,31 @@ object MUpload: TMUpload
       CaptureBackPressed = False
       GravityInParent = lgNone
     end
+    object TextOutput: jTextView
+      MarginLeft = 5
+      MarginTop = 5
+      MarginRight = 5
+      MarginBottom = 5
+      Enabled = True
+      Left = 5
+      Top = 223
+      Width = 64
+      Height = 20
+      Visible = False
+      Anchor = BDownload
+      PosRelativeToAnchor = [raBelow, raAlignLeft]
+      PosRelativeToParent = [rpLeft]
+      LayoutParamWidth = lpWrapContent
+      LayoutParamHeight = lpWrapContent
+      Text = 'TextOutput'
+      Alignment = taCenter
+      BackgroundColor = colbrDefault
+      FontColor = colbrDefault
+      FontSize = 0
+      TextTypeFace = tfNormal
+      FontSizeUnit = unitDefault
+      GravityInParent = lgNone
+    end
   end
   object DownloadService1: jDownloadService
     Left = 136

@@ -25,6 +25,7 @@ type
     HttpClient1: jHttpClient;
     IntentManager1: jIntentManager;
     PanelUtama: jPanel;
+    TextOutput: jTextView;
     procedure BDownloadClick(Sender: TObject);
     procedure BPilihClick(Sender: TObject);
     procedure BUploadClick(Sender: TObject);
@@ -85,10 +86,11 @@ procedure TMUpload.BDownloadClick(Sender: TObject);
 begin
  if (Upload=True) then
  begin
+                 // Save File to : Android\data\id.tauhidslab.androidphp.androidphp\files\Download
  DownloadService1.SaveToFile(Self.GetEnvironmentDirectoryPath(dirDownloads), ENamaFile.Text);
  DownloadService1.Start('http://192.168.1.12/webapi/upload/'+ENamaFile.Text,'id.tauhidslab.androidphp.androidphp.DOWNLOAD_RECEIVER');
- ShowMessage('Berhasil Download File '+GetEnvironmentDirectoryPath(dirDownloads)+'/'+ENamaFile.Text);
-end;                                   // Androiddata\id.tauhidslab.androidphp.androidphp\files\Download
+ TextOutput.Text:='Berhasil Download File '+sLineBreak+'Location : '+GetEnvironmentDirectoryPath(dirDownloads)+'/'+ENamaFile.Text;
+end;                                   
 end;
 
 end.

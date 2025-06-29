@@ -15,5 +15,9 @@ Aplikasi Web Service Sederhana Menggunakan Lazarus Free Pascal + PHP dan Databas
 - Java 21 (Zulu), set JAVA_HOME pada saat instalasi
 - Android NDK r22b (versi yang lebih tinggi perlu melakukan build toolchains secara mandiri)
 - Android SDK (diperoleh melalui android studio/install platform, platform tools dan build tools yang diperlukan setidaknya versi >=33 yang disyaratkan oleh Google Play Service)
+
+## Tested
 - Xiaomi Redmi Note 9 / Android 12 (mode USB debug)
+- Samsung / Android 15 
+
 - **Nonaktifkan firewall agar koneksi dari Android tidak diblok oleh Windows**
