@@ -17,9 +17,11 @@ type
   TMGetData = class(jForm)
     IDText: jTextView;
     Index: jTextView;
+    Judul: jTextView;
     ListContact: jListView;
     NamaText: jTextView;
     NoHPText: jTextView;
+    PanelAtas: jPanel;
     PanelUtama: jPanel;
     procedure ListContactClickItem(Sender: TObject; itemIndex: integer;
       itemCaption: string);
@@ -27,6 +29,7 @@ type
     {private declarations}
   public
     {public declarations}
+
   end;
 
 var

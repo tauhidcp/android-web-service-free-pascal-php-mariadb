@@ -22,11 +22,12 @@ object MGetData: TMGetData
     MarginBottom = 0
     Enabled = True
     Left = 0
-    Top = 0
+    Top = 96
     Width = 320
-    Height = 400
+    Height = 304
     Visible = True
-    PosRelativeToAnchor = []
+    Anchor = PanelAtas
+    PosRelativeToAnchor = [raBelow]
     PosRelativeToParent = []
     LayoutParamWidth = lpMatchParent
     LayoutParamHeight = lpMatchParent
@@ -45,7 +46,7 @@ object MGetData: TMGetData
       Left = 0
       Top = 0
       Width = 320
-      Height = 400
+      Height = 304
       Visible = True
       PosRelativeToAnchor = []
       PosRelativeToParent = []
@@ -174,6 +175,52 @@ object MGetData: TMGetData
       TextTypeFace = tfNormal
       FontSizeUnit = unitDefault
       GravityInParent = lgNone
+    end
+  end
+  object PanelAtas: jPanel
+    MarginLeft = 0
+    MarginTop = 0
+    MarginRight = 0
+    MarginBottom = 0
+    Enabled = True
+    Left = 0
+    Top = 0
+    Width = 320
+    Height = 96
+    Visible = True
+    PosRelativeToAnchor = []
+    PosRelativeToParent = [rpTop]
+    LayoutParamWidth = lpMatchParent
+    LayoutParamHeight = lp96px
+    BackgroundColor = colbrDefault
+    MinPinchZoomFactor = 0.25
+    MaxPinchZoomFactor = 4
+    AnimationDurationIn = 1500
+    AnimationDurationOut = 1500
+    AnimationMode = animNone
+    object Judul: jTextView
+      MarginLeft = 5
+      MarginTop = 5
+      MarginRight = 5
+      MarginBottom = 5
+      Enabled = True
+      Left = 5
+      Top = 5
+      Width = 310
+      Height = 86
+      Visible = True
+      PosRelativeToAnchor = []
+      PosRelativeToParent = []
+      LayoutParamWidth = lpMatchParent
+      LayoutParamHeight = lpMatchParent
+      Text = 'Data Contact'
+      Alignment = taCenter
+      BackgroundColor = colbrDefault
+      FontColor = colbrDefault
+      FontSize = 0
+      TextTypeFace = tfBold
+      FontSizeUnit = unitDefault
+      GravityInParent = lgCenter
     end
   end
 end

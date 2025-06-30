@@ -1584,6 +1584,10 @@ public  java.lang.Object jPanel_Create(long pasobj ) {
   return (java.lang.Object)(new jPanel(this.activity,this,pasobj));
 }
 
+public java.lang.Object jsToolbar_jCreate(long _Self, boolean _asActionBar) {
+  return (java.lang.Object)(new jsToolbar(this,_Self,_asActionBar));
+}
+
 public  java.lang.Object jTextView_Create(long pasobj) {
   return (java.lang.Object)( new jTextView(this.activity,this,pasobj));
 }

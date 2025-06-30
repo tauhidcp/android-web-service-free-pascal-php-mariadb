@@ -4,8 +4,8 @@ object MUtama: TMUtama
   MarginRight = 0
   MarginBottom = 0
   Enabled = True
-  Left = 249
-  Top = 144
+  Left = 610
+  Top = 149
   Width = 320
   Height = 446
   Text = 'MUtama'
@@ -24,11 +24,11 @@ object MUtama: TMUtama
     MarginBottom = 5
     Enabled = True
     Left = 5
-    Top = 77
+    Top = 140
     Width = 310
     Height = 50
     Visible = True
-    Anchor = PanelAtas
+    Anchor = EServerIP
     PosRelativeToAnchor = [raBelow]
     PosRelativeToParent = []
     LayoutParamWidth = lpMatchParent
@@ -48,7 +48,7 @@ object MUtama: TMUtama
     MarginBottom = 5
     Enabled = True
     Left = 15
-    Top = 197
+    Top = 260
     Width = 128
     Height = 50
     Visible = True
@@ -72,7 +72,7 @@ object MUtama: TMUtama
     MarginBottom = 5
     Enabled = True
     Left = 167
-    Top = 197
+    Top = 260
     Width = 128
     Height = 50
     Visible = True
@@ -96,7 +96,7 @@ object MUtama: TMUtama
     MarginBottom = 5
     Enabled = True
     Left = 10
-    Top = 137
+    Top = 200
     Width = 128
     Height = 50
     Visible = True
@@ -120,7 +120,7 @@ object MUtama: TMUtama
     MarginBottom = 5
     Enabled = True
     Left = 177
-    Top = 137
+    Top = 200
     Width = 128
     Height = 50
     Visible = True
@@ -137,52 +137,6 @@ object MUtama: TMUtama
     GravityInParent = lgNone
     OnClick = BUploadClick
   end
-  object PanelAtas: jPanel
-    MarginLeft = 0
-    MarginTop = 0
-    MarginRight = 0
-    MarginBottom = 0
-    Enabled = True
-    Left = 0
-    Top = 0
-    Width = 320
-    Height = 72
-    Visible = True
-    PosRelativeToAnchor = []
-    PosRelativeToParent = [rpTop]
-    LayoutParamWidth = lpMatchParent
-    LayoutParamHeight = lp72px
-    BackgroundColor = colbrDefault
-    MinPinchZoomFactor = 0.25
-    MaxPinchZoomFactor = 4
-    AnimationDurationIn = 1500
-    AnimationDurationOut = 1500
-    AnimationMode = animNone
-    object Judul: jTextView
-      MarginLeft = 5
-      MarginTop = 5
-      MarginRight = 5
-      MarginBottom = 5
-      Enabled = True
-      Left = 5
-      Top = 5
-      Width = 310
-      Height = 62
-      Visible = True
-      PosRelativeToAnchor = []
-      PosRelativeToParent = []
-      LayoutParamWidth = lpMatchParent
-      LayoutParamHeight = lpMatchParent
-      Text = 'Aplikasi Web Service Android + PHP + MariaDB'
-      Alignment = taCenter
-      BackgroundColor = colbrDefault
-      FontColor = colbrDefault
-      FontSize = 0
-      TextTypeFace = tfBold
-      FontSizeUnit = unitDefault
-      GravityInParent = lgCenter
-    end
-  end
   object PanelBawah: jPanel
     MarginLeft = 0
     MarginTop = 0
@@ -190,9 +144,9 @@ object MUtama: TMUtama
     MarginBottom = 0
     Enabled = True
     Left = 0
-    Top = 252
+    Top = 499
     Width = 320
-    Height = 194
+    Height = 0
     Visible = True
     Anchor = BUpdate
     PosRelativeToAnchor = [raBelow]
@@ -205,6 +159,89 @@ object MUtama: TMUtama
     AnimationDurationIn = 1500
     AnimationDurationOut = 1500
     AnimationMode = animNone
+  end
+  object TextServerIP: jTextView
+    MarginLeft = 5
+    MarginTop = 5
+    MarginRight = 5
+    MarginBottom = 5
+    Enabled = True
+    Left = 5
+    Top = 61
+    Width = 89
+    Height = 20
+    Visible = True
+    Anchor = Toolbar
+    PosRelativeToAnchor = [raBelow, raAlignLeft]
+    PosRelativeToParent = [rpLeft]
+    LayoutParamWidth = lpWrapContent
+    LayoutParamHeight = lpWrapContent
+    Text = 'Server Address'
+    Alignment = taLeft
+    BackgroundColor = colbrDefault
+    FontColor = colbrDefault
+    FontSize = 0
+    TextTypeFace = tfNormal
+    FontSizeUnit = unitDefault
+    GravityInParent = lgNone
+  end
+  object EServerIP: jEditText
+    MarginLeft = 5
+    MarginTop = 5
+    MarginRight = 5
+    MarginBottom = 5
+    Enabled = True
+    Left = 5
+    Top = 91
+    Width = 160
+    Height = 39
+    Visible = True
+    Anchor = TextServerIP
+    PosRelativeToAnchor = [raBelow, raAlignLeft]
+    PosRelativeToParent = [rpLeft]
+    LayoutParamWidth = lpHalfOfParent
+    LayoutParamHeight = lpWrapContent
+    Text = 'http://192.168.1.12'
+    Alignment = taLeft
+    InputTypeEx = itxText
+    MaxTextLength = -1
+    BackgroundColor = colbrDefault
+    FontColor = colbrDefault
+    FontSize = 0
+    HintTextColor = colbrDefault
+    ScrollBarStyle = scrNone
+    MaxLines = 1
+    HorScrollBar = True
+    VerScrollBar = True
+    WrappingLine = False
+    Editable = True
+    FontSizeUnit = unitDefault
+    CloseSoftInputOnEnter = True
+    CapSentence = False
+    CaptureBackPressed = False
+    GravityInParent = lgNone
+  end
+  object Toolbar: jsToolbar
+    MarginLeft = 0
+    MarginTop = 0
+    MarginRight = 0
+    MarginBottom = 0
+    Enabled = True
+    Left = 0
+    Top = 0
+    Width = 320
+    Height = 56
+    Visible = True
+    PosRelativeToAnchor = []
+    PosRelativeToParent = [rpTop]
+    LayoutParamWidth = lpMatchParent
+    LayoutParamHeight = lpWrapContent
+    Text = 'Toolbar'
+    FontColor = colbrDefault
+    GravityInParent = lgNone
+    AsActionBar = True
+    BackgroundColor = colbrDefault
+    FitsSystemWindows = False
   end
   object HttpClient1: jHttpClient
     CharSet = 'UTF-8'

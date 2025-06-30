@@ -24,6 +24,8 @@ type
     ENamaFile: jEditText;
     HttpClient1: jHttpClient;
     IntentManager1: jIntentManager;
+    Judul: jTextView;
+    PanelAtas: jPanel;
     PanelUtama: jPanel;
     TextOutput: jTextView;
     procedure BDownloadClick(Sender: TObject);
@@ -47,6 +49,8 @@ var
 
   
 implementation
+
+uses uutama;
   
   
 {$R *.lfm}
@@ -59,7 +63,7 @@ procedure TMUpload.BUploadClick(Sender: TObject);
 begin
  if not (ENamaFile.Text='') then
  begin
- HttpClient1.UploadFile('http://192.168.1.12/webapi/uploadfile.php', EPathFile.Text, 'fileupload');
+ HttpClient1.UploadFile(MUtama.EServerIP.Text+'/webapi/uploadfile.php', EPathFile.Text, 'fileupload');
  Upload:=True;
  end;
 end;
@@ -88,9 +92,10 @@ begin
  begin
                  // Save File to : Android\data\id.tauhidslab.androidphp.androidphp\files\Download
  DownloadService1.SaveToFile(Self.GetEnvironmentDirectoryPath(dirDownloads), ENamaFile.Text);
- DownloadService1.Start('http://192.168.1.12/webapi/upload/'+ENamaFile.Text,'id.tauhidslab.androidphp.androidphp.DOWNLOAD_RECEIVER');
+ DownloadService1.Start(MUtama.EServerIP.Text+'/webapi/upload/'+ENamaFile.Text,'id.tauhidslab.androidphp.androidphp.DOWNLOAD_RECEIVER');
  TextOutput.Text:='Berhasil Download File '+sLineBreak+'Location : '+GetEnvironmentDirectoryPath(dirDownloads)+'/'+ENamaFile.Text;
-end;                                   
+ TextOutput.Visible:=True;
+ end;
 end;
 
 end.

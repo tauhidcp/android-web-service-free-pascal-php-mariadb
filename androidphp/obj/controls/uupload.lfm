@@ -26,7 +26,7 @@ object MUpload: TMUpload
     Width = 320
     Height = 400
     Visible = True
-    PosRelativeToAnchor = []
+    PosRelativeToAnchor = [raBelow]
     PosRelativeToParent = []
     LayoutParamWidth = lpMatchParent
     LayoutParamHeight = lpMatchParent
@@ -47,7 +47,8 @@ object MUpload: TMUpload
       Width = 160
       Height = 39
       Visible = True
-      PosRelativeToAnchor = []
+      Anchor = PanelAtas
+      PosRelativeToAnchor = [raBelow, raAlignLeft]
       PosRelativeToParent = [rpTop, rpLeft]
       LayoutParamWidth = lpHalfOfParent
       LayoutParamHeight = lpWrapContent
@@ -201,6 +202,52 @@ object MUpload: TMUpload
       TextTypeFace = tfNormal
       FontSizeUnit = unitDefault
       GravityInParent = lgNone
+    end
+    object PanelAtas: jPanel
+      MarginLeft = 0
+      MarginTop = 0
+      MarginRight = 0
+      MarginBottom = 0
+      Enabled = True
+      Left = 0
+      Top = 0
+      Width = 320
+      Height = 96
+      Visible = True
+      PosRelativeToAnchor = []
+      PosRelativeToParent = [rpTop]
+      LayoutParamWidth = lpMatchParent
+      LayoutParamHeight = lp96px
+      BackgroundColor = colbrDefault
+      MinPinchZoomFactor = 0.25
+      MaxPinchZoomFactor = 4
+      AnimationDurationIn = 1500
+      AnimationDurationOut = 1500
+      AnimationMode = animNone
+      object Judul: jTextView
+        MarginLeft = 5
+        MarginTop = 5
+        MarginRight = 5
+        MarginBottom = 5
+        Enabled = True
+        Left = 5
+        Top = 5
+        Width = 310
+        Height = 86
+        Visible = True
+        PosRelativeToAnchor = []
+        PosRelativeToParent = []
+        LayoutParamWidth = lpMatchParent
+        LayoutParamHeight = lpMatchParent
+        Text = 'Upload File to Server'
+        Alignment = taCenter
+        BackgroundColor = colbrDefault
+        FontColor = colbrDefault
+        FontSize = 0
+        TextTypeFace = tfBold
+        FontSizeUnit = unitDefault
+        GravityInParent = lgCenter
+      end
     end
   end
   object DownloadService1: jDownloadService

@@ -8,7 +8,7 @@ uses
   {$IFDEF UNIX}{$IFDEF UseCThreads}
   cthreads,
   {$ENDIF}{$ENDIF}
-  Classes, SysUtils, AndroidWidget, Laz_And_Controls, fpjson, jsonparser,;
+  Classes, SysUtils, AndroidWidget, Laz_And_Controls, fpjson, jsonparser;
   
 type
 
@@ -19,6 +19,8 @@ type
     ENoHP: jEditText;
     ENama: jEditText;
     HttpClient1: jHttpClient;
+    Judul: jTextView;
+    PanelAtas: jPanel;
     PanelUtama: jPanel;
     TextHP: jTextView;
     TextNama: jTextView;
@@ -35,6 +37,8 @@ var
 
   
 implementation
+
+uses uutama;
   
   
 {$R *.lfm}
@@ -55,7 +59,7 @@ var
     begin
       try
         Data := GetJSON('{"nama" : "'+ENama.Text+'", "nohp" : "'+ENoHP.Text+'"}');
-        Simpan := HttpClient1.PostJSONData('http://192.168.1.12/webapi/inputcontact.php', Data.AsJSON);
+        Simpan := HttpClient1.PostJSONData(MUtama.EServerIP.Text+'/webapi/inputcontact.php', Data.AsJSON);
         JParser := TJSONParser.Create(Simpan);
         JDoc := TJSONObject(JParser.Parse);
         ShowMessage(JDoc.FindPath('Respon').AsString);

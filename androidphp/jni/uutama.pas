@@ -9,7 +9,7 @@ uses
   cthreads,
   {$ENDIF}{$ENDIF}
   Classes, SysUtils, AndroidWidget, Laz_And_Controls, fpjson, jsonparser,
-  utambah, uupdate, uupload, ugetdata, And_jni;
+  utambah, uupdate, uupload, ugetdata, And_jni, stoolbar;
   
 type
 
@@ -21,10 +21,12 @@ type
     BHapus: jButton;
     BTambah: jButton;
     BUpload: jButton;
+    EServerIP: jEditText;
     HttpClient1: jHttpClient;
-    PanelAtas: jPanel;
     Judul: jTextView;
     PanelBawah: jPanel;
+    TextServerIP: jTextView;
+    Toolbar: jsToolbar;
     procedure BGetDataClick(Sender: TObject);
     procedure BHapusClick(Sender: TObject);
     procedure BTambahClick(Sender: TObject);
@@ -69,7 +71,7 @@ var
     MGetData.ListContact.Clear;
 
    try
-       Contact := HttpClient1.Get('http://192.168.1.12/webapi/datacontact.php');
+       Contact := HttpClient1.Get(EServerIP.Text+'/webapi/datacontact.php');
        ParsedArray := TJSONArray(GetJSON(Contact));
 
        for j := 0 to ParsedArray.Count - 1 do
@@ -101,7 +103,7 @@ begin
         begin
         try
            Data := GetJSON('{"id" : "'+idx+'"}');
-           Hapus   := HttpClient1.PostJSONData('http://192.168.1.12/webapi/deletecontact.php',Data.AsJSON);
+           Hapus   := HttpClient1.PostJSONData(EServerIP.Text+'/webapi/deletecontact.php',Data.AsJSON);
            JParser := TJSONParser.Create(Hapus);
            JDoc := TJSONObject(JParser.Parse);
            ShowMessage(JDoc.FindPath('Respon').AsString);
@@ -201,6 +203,13 @@ begin
    MUpload.PanelUtama.Parent:= Self.PanelBawah;
    MUpload.PanelUtama.SetViewParent(Self.PanelBawah.View);
    MUpload.PanelUtama.Visible:=False;
+
+   Toolbar.SetFitsSystemWindows(True);
+   Toolbar.SetBackgroundToPrimaryColor();
+   Toolbar.SetTitleTextColor(colbrWhite);
+   Toolbar.SetTitle('AndroidPHP');
+   Toolbar.SetSubtitleTextColor(colbrWhite);
+   Toolbar.SetSubtitle('Aplikasi Web Service Android + PHP + MariaDB');
 end;
 
 procedure TMUtama.CloseModule;
